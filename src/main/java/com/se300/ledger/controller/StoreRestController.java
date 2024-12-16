@@ -24,8 +24,13 @@ import org.springframework.web.bind.annotation.*;
 @SecurityRequirement(name = "basicAuth")
 public class StoreRestController {
 
+    private final StoreModelAPI storeModelService;  // Declare the field as final
+
+    // Constructor Injection
     @Autowired
-    StoreModelAPI storeModelService;
+    public StoreRestController(StoreModelAPI storeModelService) {
+        this.storeModelService = storeModelService;
+    }
 
     @Operation(summary = "Create Store", tags = {"stores"})
     @ApiResponses({
