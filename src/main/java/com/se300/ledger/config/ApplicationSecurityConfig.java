@@ -43,7 +43,7 @@ public class ApplicationSecurityConfig {
                                         .and()
                                         .httpBasic();
                             } catch (Exception e) {
-                                e.printStackTrace();
+                                logger.error("An error occurred while configuring security", e);
                             }
                         }
                 );
