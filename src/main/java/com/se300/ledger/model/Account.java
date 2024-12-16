@@ -35,6 +35,12 @@ public class Account {
 
     }
 
+    public Account(Account other) {
+        this.address = other.address;
+        this.balance = other.balance;
+    }
+    // copy constructor instead of cloning
+
     /**
      * Getter Method for account address
      * @return
