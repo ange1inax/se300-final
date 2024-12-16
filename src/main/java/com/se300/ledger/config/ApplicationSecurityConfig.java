@@ -49,7 +49,7 @@ public class ApplicationSecurityConfig {
                 );
 
 
-        http.csrf().disable();
+        http.csrf().enable();
         http.headers().frameOptions().disable();
 
         return http.build();
