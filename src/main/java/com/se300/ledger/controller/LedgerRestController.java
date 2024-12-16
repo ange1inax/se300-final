@@ -7,11 +7,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 public class LedgerRestController {
 
-    public Account createAccount(@RequestBody Account account) throws LedgerException {
-
-        //TODO: Implement Create Account
-
-        return null;
+    public Account createAccount() throws LedgerException {
+    // Logic to create an account without using the parameter
+        return new Account(); // Example return statement
     }
 
     public Account getAccount(@PathVariable String address) throws LedgerException {
